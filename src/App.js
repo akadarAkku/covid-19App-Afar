@@ -4,7 +4,7 @@ import Navbar from "./components/layouts/Navbar";
 import { Switch, Route } from "react-router-dom";
 import Home from "./components/pages/Home";
 import About from "./components/pages/About";
-// import Contact from "./components/pages/Contact";
+import Contact from "./components/pages/Contact";
 import Default from "./components/pages/Default";
 import Accordion from './components/pages/Accordion';
 import "./App.css";
@@ -21,7 +21,7 @@ class App extends Component {
           <Route exact path="/" component={Home} />
           <Route path="/Accordion" component={Accordion} />
           <Route path="/about" component={About} />
-          {/* <Route path="/contact" component={Contact} /> */}
+          <Route path="/contact" component={Contact} />
         
       
 
