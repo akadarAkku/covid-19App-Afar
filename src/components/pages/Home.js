@@ -9,6 +9,7 @@ import AnimatedTex from './Animated/AnimatedTex';
 import CountryPicker from './CountryPicker/CountryPicker';
 
 
+
 class Home extends Component {
   state = {
     data: {},
@@ -33,6 +34,7 @@ class Home extends Component {
         <AnimatedTex/>
       <Cards data={data} country={country}/>
       <CountryPicker handleCountryChange={this.handleCountryChange} />
+  
         <SlideShow />
 
        
