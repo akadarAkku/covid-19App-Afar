@@ -5,14 +5,15 @@ class Contact extends Component {
     return (
       <section className="contact-page py-5">
         <div className="container">
+        
+
           <div className="row location">
             
             <div className="col-md-6">
               <h4>
                 <strong>Neh uktuba</strong>
               </h4>
-              <form name="contact" method="post" data-netlify="true"
-              data-netlify-honeypot="bot-field">
+              <form>
                 <div className="form-group">
                   <input
                     type="text"
@@ -50,7 +51,6 @@ class Contact extends Component {
                   &nbsp;Rub
                 </button>
               </form>
-              <link to="/Home">Gadda geyaay, ugtuma fanah uduur.</link>
             </div>
           </div>
         </div>
