@@ -7,6 +7,8 @@ import styles from './App.module.css'
 import Cards from './Cards/Cards';
 import AnimatedTex from './Animated/AnimatedTex';
 import CountryPicker from './CountryPicker/CountryPicker';
+// import InfoPage from './Info/infoPage';
+// import ModalTwo from './Info/ModalTwo';
 
 
 
@@ -34,7 +36,9 @@ class Home extends Component {
         <AnimatedTex/>
       <Cards data={data} country={country}/>
       <CountryPicker handleCountryChange={this.handleCountryChange} />
-  
+      {/* <InfoPage/> */}
+    
+
         <SlideShow />
 
        

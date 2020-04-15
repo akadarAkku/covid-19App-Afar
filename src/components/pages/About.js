@@ -19,7 +19,6 @@ class About extends Component {
               Too taamak naharsi taama tamanna celtaah, dudda fooca fanah faxximtam edde osisak missoysak benno.
               Takkel geytoonu waytan oytitte, baadak qaafiyat egla akke kee (Qafar rakaakayak qaafiyat biiro edde anuk
               ) Masquliyyat le xagorti kee tutaaxagok geynem dubuh akkele.</p>
-              <p>sed lobortis pulvinar. Integer laoreet mi id eros porta euismod. Suspendisse potenti. Nulla eros mauris, convallis et sem tempus, viverra hendrerit sapien</p>
                {/*team-1*/}
       <div className="col-lg-4">
         <div className="our-team-main">
