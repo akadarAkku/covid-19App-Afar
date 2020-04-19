@@ -1,61 +1,56 @@
-import React, { Component } from "react";
+import React, {Component} from 'react';
+import axios from 'axios';
 
-class Contact extends Component {
-  render() {
-    return (
-      <section className="contact-page py-5">
-        <div className="container">
-        
+class Contact extends Component{
+  
+    handleSubmit(e){
+        e.preventDefault();
+        const name = document.getElementById('name').value;
+        const email = document.getElementById('email').value;
+        const message = document.getElementById('message').value;
+        axios({
+            method: "POST", 
+            url:"http://localhost:3000/send", 
+            data: {
+                name: name,   
+                email: email,  
+                messsage: message
+            }
+        }).then((response)=>{
+            if (response.data.msg === 'success'){
+                alert("Message Sent."); 
+                this.resetForm()
+            }else if(response.data.msg === 'fail'){
+                alert("Message failed to send.")
+            }
+        })
+    }
 
-          <div className="row location">
-            
-            <div className="col-md-6">
-              <h4>
-                <strong>Neh uktuba</strong>
-              </h4>
-              <form>
-                <div className="form-group">
-                  <input
-                    type="text"
-                    className="form-control"
-                    placeholder="Migaq akkel hayis"
-                  />
-                </div>
-                <div className="form-group">
-                  <input
-                    type="email"
-                    className="form-control"
-                    placeholder="Kû Email akkel hayis"
-                  />
-                </div>
-                <div className="form-group">
-                  <input
-                    type="tel"
-                    className="form-control"
-                    placeholder="Isi Nibro akkel hayis"
-                  />
-                  <div className="form-group">
-                    <textarea
-                      className="form-control"
-                      cols="30"
-                      rows="3"
-                      placeholder="Ayyufta akkel hayis"
-                    />
-                  </div>
-                </div>
-                <button
-                  className="btn btn-outline-primary  text-uppercase mt-1"
-                  type="submit"
-                >
-                  <i className="fa fa-paper-plane-o" aria-hidden="true" />
-                  &nbsp;Rub
-                </button>
-              </form>
+    resetForm(){
+        document.getElementById('contact-form').reset();
+    }
+
+    render(){
+        return(
+            <div className="col-sm-4 offset-sm-4">
+                <form id="contact-form" onSubmit={this.handleSubmit.bind(this)} method="POST">
+                    <div className="form-group">
+                        <label for="name">Migaq</label>
+                        <input type="text" className="form-control" id="name" />
+                    </div>
+                    <div className="form-group">
+                        <label for="exampleInputEmail1">Kû Email</label>
+                        <input type="email" className="form-control" id="email" aria-describedby="emailHelp" />
+                    </div>
+                    <div className="form-group">
+                        <label for="message">Ayyufta</label>
+                        <textarea className="form-control" rows="5" id="message"></textarea>
+                    </div>
+                    <button type="submit" className="btn btn-primary">Rub</button>
+                </form>
             </div>
-          </div>
-        </div>
-      </section>
-    );
-  }
+        )
+    }
 }
+
 export default Contact;

@@ -16,19 +16,20 @@ class SlideShow extends Component {
         >
           <div className="carousel-inner">
             <div className="carousel-item active">
-              <img src={slide01} className="d-block w-100" alt="first slide" style={{width:'100%', height:'360px'}} />
+              <img src={slide01} className="d-block w-100" alt="first slide" style={{width:'100%', height:'380px'}} />
             </div>
             <div className="carousel-item">
-              <img src={slide02} className="d-block w-100" alt="second slide" style={{width:'100%', height:'360px'}} />
+              <img src={slide02} className="d-block w-100" alt="second slide" style={{width:'100%', height:'380px'}} />
             </div>
             <div className="carousel-item">
-              <img src={slide03} className="d-block w-100" alt="third slide" style={{width:'100%', height:'360px'}} />
+              <img src={slide03} className="d-block w-100" alt="third slide" style={{width:'100%', height:'380px'}} />
             </div>
 
             <div className="carousel-item">
-              <img src={slide04} className="d-block w-100" alt="third slide" style={{width:'100%', height:'360px'}} />
+              <img src={slide04} className="d-block w-100" alt="third slide" style={{width:'100%', height:'380px'}} />
             </div>
           </div>
+          
           <a
             className="carousel-control-prev"
             href="#carouselExampleControls"

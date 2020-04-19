@@ -37,6 +37,7 @@ class Home extends Component {
       <Cards data={data} country={country}/>
       <CountryPicker handleCountryChange={this.handleCountryChange} />
       {/* <InfoPage/> */}
+      {/* <ModalTwo/> */}
     
 
         <SlideShow />
